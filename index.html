@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">       
+ 
+ <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> 
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Eater&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Eater&family=Metal+Mania&display=swap" rel="stylesheet">
+<title>HALLOWEEN QUIZ!</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+    
+    
+</head>
+<body>
+    
+<body>
+    <div class="container-xxl">
+        <!-- Your content goes here -->
+    </div>
+    
+
+    <div class="container">
+
+            <h1>Are you ready for a hauntingly good time? Step into the eerie world of Halloween with this short quiz! Test your knowledge of spooky traditions and mystical history in just a few questions.</h1>
+            
+    </div>
+    
+    <form id="form1">
+
+
+        <div class="container-md">
+        <h2>What is the day after Halloween called?</h2>
+        <label for="day_string"><input type="radio"  name="day" value="0" id="day_string" />All-hallows day</label>
+        <label for="day_join"><input type="radio" name="day" value="0" id="day_join" />Night of witches</label>
+        <label for="day_info"><input type="radio" name="day" value="20" id="day_info" />All Saints Day</label>
+        <label for="day_condition"><input type="radio" name="day" value="0" id="day_condition"/>Samhain</label>
+        </div>
+
+
+        <div class="container-md">
+        <h2>What is a group of witches called?</h2>
+        <label for="witch_string"><input type="radio" name="witch" value="20" id="witch_string"/>A coven.</label>
+        <label for="witch_join"><input type="radio" name="witch" value="0" id="witch_join"/>A convent</label>
+        <label for="witch_info"><input type="radio" name="witch" value="0" id="witch_info" />A flock</label>
+        <label for="witch_condition"><input type="radio" name="witch" value="0" id="witch_condition" />A pack</label>
+        </div>
+
+
+        <div class="container-md">
+        <h2>What is the name of the Mexican festival held around the same time as Halloween?</h2>
+        <label for="fest_string"><input type="radio" name="fest" value="0" id="fest_string" />Cinco de Mayo</label>
+        <label for="fest_join"><input type="radio" name="fest" value="20" id="fest_join" />Dia de los Meurtos(Day of the Dead)</label>
+        <label for="fest_info"><input type="radio" name="fest" value="0" id="fest_info" />All-hallows eve</label>
+        <label for="fest_condition"><input type="radio" name="fest" value="0" id="fest_condition" />Day of Dracula</label>
+        </div>
+
+
+        <div class="container-md">
+        <h2>Which famous magician(s) died on Halloween in 1926?</h2>
+        <label for="magic_string"><input type="radio" name="magic" value="0" id="magic_string" />Seigfried & Roy</label>
+        <label for="magic_join"><input type="radio" name="magic" value="0" id="magic_join" />Harry Blackstone Sr.</label>
+        <label for="magic_info"><input type="radio" name="magic" value="0" id="magic_info" />JeanEugene Robert-Houdin</label>
+        <label for="magic_condition"><input type="radio" name="magic"  value="20" id="magic_condition" />Harry Houdini</label>
+        </div>
+
+
+        <div class="container-md">
+        <h2>What is the Celtic name for the end of the harvest festival held on october 31st - November 1st?</h2>
+        <label for="celtic_string"><input type="radio" name="celtic" value="0" id="celtic_string" />Reaper Rave</label>
+        <label for="celtic_join"><input type="radio" name="celtic" value="0" id="celtic_join" />Festival of the dead</label>
+        <label for="celtic_info"><input type="radio" name="celtic" value="0" id="celtic_info" />Macabre Masquerade</label>
+        <label for="celtic_condition"><input type="radio" name="celtic"  value="20" id="celtic_condition" />Samhain</label>
+        </div>
+
+
+
+
+        <div class="text-center">
+            <button class="btn btn-primary" value="Submit" type="submit">Submit</button>
+        </div>
+
+        </form>
+        
+     <div class="container">
+    <p>Your grade is: <span id="grade">__</span></p>
+    <p id="grade2"></p>
+    </div>
+
+
+    <script>
+        document.getElementById("form1").onsubmit = function() {
+    // Check if all questions are answered
+    if (!validateQuestion("day") || !validateQuestion("witch") || !validateQuestion("fest") || !validateQuestion("magic") || !validateQuestion("celtic")) {
+        alert("Please answer all questions before submitting.");
+        return false;
+    }
+
+    // grading
+    day = parseInt(document.querySelector('input[name = "day"]:checked').value);
+    witch = parseInt(document.querySelector('input[name = "witch"]:checked').value);
+    fest = parseInt(document.querySelector('input[name = "fest"]:checked').value);
+    magic = parseInt(document.querySelector('input[name = "magic"]:checked').value);
+    celtic = parseInt(document.querySelector('input[name = "celtic"]:checked').value);
+
+    result = day + witch + fest + magic + celtic;
+
+    document.getElementById("grade").innerHTML = result;
+
+    grading = [
+        { score: 0, feedback: "Prepare for a Fright this Halloween Night!", image: "frightnight.jpg" },
+        { score: 20, feedback: "Prepare for a Fright this Halloween Night!", image: "frightnight.jpg" },
+        { score: 40, feedback: "So close. Boo to you!", image: "bootoyou.jpg" },
+        { score: 60, feedback: "So close. Boo to you!", image: "bootoyou.jpg" },
+        { score: 80, feedback: "Cheers to a Cool Ghoul!", image: "cheers.jpg" },
+        { score: 100, feedback: "You're Bad to the Bone!", image: "badtobone.jpg" }
+    ];
+
+    for (i = 0; i < grading.length; i++) {
+        if (result == grading[i].score) {
+            result2 = grading[i].feedback + "<br /><img src='" + grading[i].image + "' width='40%'  />";
+        }
+    }
+
+    document.getElementById("grade2").innerHTML = result2;
+
+    return false; 
+};
+
+// Validation function for each question
+function validateQuestion(questionName) {
+    var radios = document.getElementsByName(questionName);
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            return true; // At least one option is checked
+        }
+    }
+    return false; // No option is checked
+}
+
+        </script>
+        
+      <!-- Bootstrap JS -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>      
+    </body>
+</html>
+ 

@@ -1,0 +1,141 @@
+body {
+    background-color: lightblue;
+    font-family: Helvetica;
+    }
+    
+    #main {
+    width: 80%;
+    max-width: 950px;
+    border: 1px gray solid;
+    margin: auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    }
+    
+    #header {
+    margin-top: 0;
+    border: 2px solid black;
+    padding: 5px;
+    height: 250px;
+    background: beige;
+    background-image: url("pic.jpg");
+    color: white;
+    }
+
+    label {
+display: block;
+}
+
+input {
+width: 30px;
+margin-left: 20px;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+.container-md {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background: rgb(255, 147, 85);
+    border-radius: 5px;
+    padding: 25px;
+    opacity: 75%;
+    
+    
+    
+  }
+  
+  .container {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background: #9f3ebd;
+    border-radius: 5px;
+    padding: 25px;
+    opacity: 75%;
+    text-align: center;
+  }
+  
+  
+
+  input[type="radio"]{
+    margin-left: 50px;
+    margin-right: 10px;
+  }
+  
+  body {
+    background: #9f3ebd;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .radio {
+    text-align: left;
+    position: relative;
+    width: fit-content;
+    height: 60px;
+    display: flex;
+
+    overflow-wrap: break-all;
+  }
+  
+  .space {
+    padding-top: 20px;
+  }
+  
+  p {
+    font-family: 'Metal Mania';
+    color: rgb(255, 147, 85);
+  }
+  
+  label {
+    font-family: 'Metal Mania';
+    color: #9f3ebd;
+  }
+  
+  h1 { 
+  
+    font-family: 'Creepster';
+    color: rgb(255, 147, 85);
+  }
+
+  h2 { 
+    font-family: 'Metal Mania';
+    color: #9f3ebd;
+  }
+
+
+  .btn-primary, .btn-primary:active, .btn-primary:visited, .btn-outline-primary {
+    color: #9f3ebd;
+    background-color: rgb(255, 147, 85);
+    border-color: #9f3ebd !important;
+    font-family: 'Metal Mania';
+}
+
+.btn-primary:hover{
+  
+  text-anchor: #000000;
+  background-color: #000000;
+  border-color:  #9f3ebd !important;
+  font-family: 'Metal Mania';
+    color: rgb(255, 147, 85);
+}
+
+
+.container-xxl {
+  background-image: url('banner.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 30px !important ;
+  padding: 25px;
+  min-height: 350px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+
